@@ -7,4 +7,4 @@ app = Flask(__name__)
 def catch_all(path):
   url=request.args.get('url') or path
   info=YoutubeDL({}).extract_info(url, download=False)
-  return Response(info)
+  return info
